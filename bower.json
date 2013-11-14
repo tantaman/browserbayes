@@ -1,0 +1,14 @@
+{
+  "name": "browserbayes",
+  "version": "0.0.0",
+  "dependencies": {
+  	"requirejs": "~2.1.8",
+    "d3": "~3.3.9",
+    "lodash": "~2.2.1",
+    "modernizr": "~2.6.2",
+    "polymer": "latest",
+    "bacon": "~0.6.21",
+    "bootstrap": "~3.0.0"
+  },
+  "devDependencies": {}
+}
