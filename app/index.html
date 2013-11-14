@@ -16,7 +16,9 @@
         <!-- endbuild -->
 
         <!-- Place your HTML imports here -->
-        <link rel="import" href="elements/network-graph.html">
+        <link rel="import" href="elements/network-graph/network-graph.html">
+        <link rel="import" href="elements/icon-bar/icon-bar.html">
+        <link rel="import" href="elements/model-init.html">
     </head>
     <body>
         <div class="container">
@@ -48,12 +50,20 @@
         <!-- endbuild -->
 
         <script>
-        Polymer.require = function(tag, deps, func) {
-          require(deps, function() {
-            Polymer(tag, func.apply(this, arguments));
-          });
+        Polymer.define = function(tag) {
+            return function(deps, func) {
+                require(deps, function() {
+                    Polymer(tag, func.apply(this, arguments));
+                });
+            };
         };
         </script>
-      <network-graph></network-graph>
+
+      <model-init type="bayesianNetwork">
+        <icon-bar interfaces="bayesianNetworkComponent" targets="^model-init"></icon-bar>
+        <network-graph class="bayesianNetworkGraph" data="^model-init;.graph">
+        </network-graph>
+      </model-init>
+      <model-init-element></model-init-element>
 </body>
 </html>

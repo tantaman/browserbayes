@@ -8,7 +8,8 @@
     "modernizr": "~2.6.2",
     "polymer": "latest",
     "bacon": "~0.6.21",
-    "bootstrap": "~3.0.0"
+    "bootstrap": "~3.0.0",
+    "lls": "~0.1.3"
   },
   "devDependencies": {}
 }
